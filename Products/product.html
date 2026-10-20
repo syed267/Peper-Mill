@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Products</title>
      <link rel="stylesheet" href="product.css">
-    <link rel="icon" href="ass/logos.jpeg">
+    <link rel="icon" href="../ass/logos.jpeg">
    <link rel="stylesheet" href="../index.css">
 
 </head>
@@ -46,7 +46,7 @@
             </ul>
 
             <!-- Contact Button with Phone Icon on Left -->
-         <a href="#" 
+         <a href="../Contacts/contacts.html" 
    target="_blank" 
    class="btn-contact">
    
@@ -218,6 +218,40 @@
     </div>
 </section>
 
+<div id="enquiryModal" class="enq-overlay">
+  <div class="enq-box">
+    <button class="enq-close" onclick="closeEnquiry()">&times;</button>
+    <div id="enqFormWrap">
+      <h4 id="enqProductTitle">Enquiry</h4>
+      <p class="enq-sub">Fill the details, we will contact you soon.</p>
+      <form id="enquiryForm" onsubmit="submitEnquiry(event)">
+        <input type="hidden" id="enqProductInput">
+        <div class="enq-field">
+          <label>Name</label>
+          <input type="text" id="enqName" placeholder="Your name" required>
+        </div>
+        <div class="enq-field">
+          <label>Phone No</label>
+          <input type="tel" id="enqPhone" placeholder="10 digit number" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)" required>
+          <small id="phoneError" style="color:red;display:none;font-size:12px;">Enter valid 10 digit number</small>
+        </div>
+        <div class="enq-field">
+          <label>Message</label>
+          <textarea id="enqMsg" rows="4" placeholder="My Message..." required></textarea>
+        </div>
+        <button type="submit" class="enq-submit">Submit</button>
+      </form>
+    </div>
+    <div id="enqSuccessWrap" style="display:none;text-align:center;">
+      <div class="enq-success-icon">✓</div>
+      <h4>Successfully Submitted!</h4>
+      <p>Enquiry for <b id="successProduct"></b> received.</p>
+      <button class="enq-submit" onclick="closeEnquiry()">Close</button>
+    </div>
+  </div>
+</div>
+
+
 
 <section class="end">
     <div class="fts">
@@ -225,9 +259,8 @@
         <div class="ft2">
             <h5>SUPPORT</h5>
             <ul>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="../Contacts/contacts.html">Contact Us</a></li>
                 <li>Request a Quote</li>
-                <li>Product Enquiries</li>
                 <li>Technical Assistance</li>
             </ul>
         </div>
@@ -245,12 +278,11 @@
         <div class="ft4">
             <h5>COMPANY</h5>
             <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="products.html">Our Products</a></li>
-                <li>Industries We Serve</a></li>
-                <li><a href="why-choose-us.html">Why Choose Us</a></li>
-                <li>Our Expertise</li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="../index.html">About Us</a></li>
+                <li><a href="product.html">Our Products</a></li>
+                <li><a href="../Services/service.html"></a>Industries We Serve</a></li>
+                <li><a href="../index.html">Why Choose Us</a></li>
+                <li><a href="../index.html">Our Expertise</a></li>
             </ul>
         </div>
 
@@ -263,12 +295,13 @@
                 <li>Paper Recycling Equipment</li>
                 <li>Frequently Asked Questions</li>
                 <li>Request a Quote</li>
-                <li>Enquiries</a></li>
             </ul>
         </div>
 
     </div>
 </section>
+
+<script src="product.js"></script>
 
 </body>
 </html>

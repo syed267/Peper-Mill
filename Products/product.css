@@ -261,3 +261,86 @@
   .pd-card, .pd-heading, .pd-heading p{ animation: none; }
   .pd-card::after, .pd-btn::before{ display: none; }
 }
+
+.enq-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:99999;
+  padding:15px
+}
+.enq-overlay.active{display:flex}
+
+.enq-box{
+  background:#fff;
+  width:100%;
+  max-width:440px;
+  border-radius:16px;
+  padding:28px;
+  position:relative;
+  border-top:4px solid #FF6B00;
+  box-shadow:0 20px 60px rgba(255,107,0,.2)
+}
+
+.enq-close{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  border:0;
+  background:#FFF0E6;
+  color:#FF6B00;
+  font-size:22px;
+  cursor:pointer
+}
+.enq-close:hover{background:#FF6B00;color:#fff}
+
+.enq-box h4{color:#111}
+.enq-sub{color:#6b7280}
+
+.enq-field{margin-bottom:14px}
+.enq-field label{font-size:13px;font-weight:600;display:block;margin-bottom:5px;color:#333}
+.enq-field input,.enq-field textarea{
+  width:100%;
+  border:1px solid #FFD1A6;
+  border-radius:10px;
+  padding:11px 14px;
+  outline:none;
+  transition:.2s
+}
+.enq-field input:focus,.enq-field textarea:focus{
+  border-color:#FF6B00;
+  box-shadow:0 0 0 3px rgba(255,107,0,.15)
+}
+
+.enq-submit{
+  width:100%;
+  background:#FF6B00;
+  color:#fff;
+  border:0;
+  border-radius:10px;
+  padding:12px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s
+}
+.enq-submit:hover{background:#E55F00;box-shadow:0 8px 20px rgba(255,107,0,.3)}
+
+.enq-success-icon{
+  width:64px;
+  height:64px;
+  background:#FFF0E6;
+  color:#FF6B00;
+  border:2px solid #FF6B00;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:32px;
+  margin:0 auto 16px
+}
+#phoneError{color:#FF6B00!important}
