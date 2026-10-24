@@ -177,7 +177,6 @@
   margin: 0 auto;
 }
 
-
 /* ===== SERVICE CARD ===== */
 .service-card {
   background: var(--white);
@@ -299,6 +298,138 @@
     height: 190px;
   }
 }
+
+/* ===== ENQUIRY BUTTON ===== */
+.enquiry-btn {
+  display: inline-block;
+  margin-top: 18px;
+  background: var(--secondary);
+  color: var(--white);
+  border: 2px solid var(--secondary);
+  padding: 10px 26px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.enquiry-btn:hover {
+  background: transparent;
+  color: var(--secondary);
+}
+
+/* ===== ENQUIRY MODAL ===== */
+.enquiry-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.enquiry-close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.enquiry-modal.active {
+  display: flex;
+}
+
+.enquiry-modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 480px;
+  border-radius: 18px;
+  padding: 30px;
+  position: relative;
+  animation: modalFade 0.3s ease;
+}
+
+@keyframes modalFade {
+  from { opacity: 0; transform: translateY(-20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.enquiry-close {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #0B1823;
+}
+
+.enquiry-modal-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0B1823;
+  margin-bottom: 5px;
+}
+
+.enquiry-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0B1823;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(254, 85, 22, 0.15);
+}
+
+.enquiry-submit-btn {
+  width: 100%;
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.enquiry-submit-btn:hover {
+  background: #d94710;
+}
+
 
 :root{
   --primary: #E8D9BB;
@@ -653,3 +784,4 @@
   .cta-content h2{ font-size: 1.6rem; }
   .cta-btn{ padding: 12px 24px; font-size: 0.95rem; }
 }
+

@@ -8,7 +8,7 @@
     <title>Our Service</title>
     <link rel="icon" href="../ass/logos.jpeg">
         <link rel="stylesheet" href="service.css">
-        <link rel="stylesheet" href="../index.css">
+        <link rel="stylesheet" href="../home.css">
 
 </head>
 <body>
@@ -68,7 +68,6 @@
     </div>
 </section>
 
-
 <section class="core-services py-5">
     <div class="container">
 
@@ -94,6 +93,7 @@
                            Writing and Printing Paper, Tissue Paper, Specialty Paper, Packaging Paper, and Board Grades. 
                            Our services include machine design, manufacturing, installation, and production line optimization. 
                         </p>
+                        <a href="#enquiry" class="enquiry-btn">Enquiry Now</a>
                     </div>
                 </div>
             </div>
@@ -112,6 +112,7 @@
                           Our Hydraulic Headbox is designed to deliver consistent paper quality while reducing energy consumption. 
                           It ensures accurate cross-directional (CD) grammage profiles and uniform fiber orientation for improved paper formation. 
                         </p>
+                        <a href="#enquiry" class="enquiry-btn">Enquiry Now</a>
                     </div>
                 </div>
             </div>
@@ -129,6 +130,7 @@
                         <p>
                            We provide a comprehensive range of paper machine forming sections designed to meet the production requirements of different paper and board grades across various operating speeds.
                         </p>
+                        <a href="#enquiry" class="enquiry-btn">Enquiry Now</a>
                     </div>
                 </div>
             </div>
@@ -145,6 +147,7 @@
                         <h4>Bi-Nip Press</h4>
                         <p>
 We offer high-quality Bi-Nip Press Sections designed to meet the diverse requirements of the paper and board manufacturing industry. Manufactured using quality materials and industry-standard practices, our press sections are engineered for reliable performance and efficient moisture removal.                         </p>
+                        <a href="#enquiry" class="enquiry-btn">Enquiry Now</a>
                     </div>
                 </div>
             </div>
@@ -162,6 +165,7 @@ We offer high-quality Bi-Nip Press Sections designed to meet the diverse require
                         <p>
                           Our Paper Machine Dryer Section is designed to efficiently remove moisture from the paper web using a series of internally steam-heated cylinders. The drying process helps achieve the required paper dryness while maintaining consistent quality and smooth production. 
                         </p>
+                        <a href="#enquiry" class="enquiry-btn">Enquiry Now</a>
                     </div>
                 </div>
             </div>
@@ -179,6 +183,7 @@ We offer high-quality Bi-Nip Press Sections designed to meet the diverse require
                         <p>
                            Our Paper Winders and Rewinders are designed using advanced two-drum winding technology to support efficient, high-speed paper roll processing. Suitable for a wide range of paper and board grades, including writing and printing paper and tissue paper.
                         </p>
+                        <a href="#enquiry" class="enquiry-btn">Enquiry Now</a>
                     </div>
                 </div>
             </div>
@@ -187,6 +192,47 @@ We offer high-quality Bi-Nip Press Sections designed to meet the diverse require
     </div>
 </section>
 
+<!-- Enquiry Modal --><div id="enquiryModal" class="enquiry-modal">
+  <div class="enquiry-modal-content">
+    <span class="enquiry-close">&times;</span>
+    <h3 id="modalServiceTitle">Enquiry Form</h3>
+    <p class="enquiry-subtitle">Fill the details, we will contact you soon.</p>
+    
+    <form id="enquiryForm">
+      <input type="hidden" name="access_key" value="f50491de-c660-4a80-bbb8-c2e213d10d1f">
+      <input type="hidden" id="serviceName" name="service">
+      <input type="hidden" id="enqSubject" name="subject" value="New Enquiry">
+      
+      <div class="form-group">
+        <label>Name *</label>
+        <input type="text" name="name" id="userName" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone *</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter 10 digit number" maxlength="10" inputmode="numeric" required>
+        <small id="phoneError" style="color:red;display:none;font-size:12px;">Enter valid 10 digit number</small>
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" id="userMsg" rows="4" placeholder="Your requirement..." required></textarea>
+      </div>
+
+      <button type="submit" class="enquiry-submit-btn" id="submitBtn">Submit Enquiry</button>
+    </form>
+
+    <!-- Success Message -->
+    <div id="enqSuccessWrap" style="display:none;text-align:center;padding:20px 0;">
+      <div style="width:60px;height:60px;background:#d1fae5;color:#059669;font-size:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">✓</div>
+      <h3>Successfully Submitted!</h3>
+      <p>We received your enquiry for <b id="successProduct"></b></p>
+      <p style="font-size:13px;color:#666;">We will contact you soon.</p>
+      <button class="enquiry-submit-btn" onclick="closeEnquiry()" style="margin-top:12px">Close</button>
+    </div>
+
+  </div>
+</div>
 
 <section class="different">
     <h2 class="diff-title">
@@ -327,6 +373,7 @@ We offer high-quality Bi-Nip Press Sections designed to meet the diverse require
     </div>
 </section>
 
+<script src="service.js"></script>
 
 </body>
 </html>

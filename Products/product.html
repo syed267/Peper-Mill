@@ -7,7 +7,8 @@
     <title>Products</title>
      <link rel="stylesheet" href="product.css">
     <link rel="icon" href="../ass/logos.jpeg">
-   <link rel="stylesheet" href="../index.css">
+   <link rel="stylesheet" href="../home.css">
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </head>
 <body>
@@ -74,10 +75,10 @@
                     </div>
                     <div class="pd-body">
                         <h5>Pulper</h5>
-                        <a href="#" class="pd-btn"
-                           onclick="openEnquiry('Pulper'); return false;">
-                            Enquire Now <i class="bi bi-arrow-right"></i>
-                        </a>
+                       <a href="#" class="pd-btn"
+   onclick="openEnquiry('Hydropulper Shell'); return false;">
+    Enquire Now <i class="bi bi-arrow-right"></i>
+</a>
                     </div>
                 </div>
             </div>
@@ -90,10 +91,10 @@
                     </div>
                     <div class="pd-body">
                         <h5>Agitator</h5>
-                        <a href="#" class="pd-btn"
-                           onclick="openEnquiry('Agitator'); return false;">
-                            Enquire Now <i class="bi bi-arrow-right"></i>
-                        </a>
+                     <a href="#" class="pd-btn"
+   onclick="openEnquiry('Hydropulper Shell'); return false;">
+    Enquire Now <i class="bi bi-arrow-right"></i>
+</a>
                     </div>
                 </div>
             </div>
@@ -108,9 +109,9 @@
                     <div class="pd-body">
                         <h5>Hydropulper Stainless Steel 304</h5>
                         <a href="#" class="pd-btn"
-                           onclick="openEnquiry('Hydropulper Stainless Steel 304'); return false;">
-                            Enquire Now <i class="bi bi-arrow-right"></i>
-                        </a>
+   onclick="openEnquiry('Hydropulper Shell'); return false;">
+    Enquire Now <i class="bi bi-arrow-right"></i>
+</a>
                     </div>
                 </div>
             </div>
@@ -125,9 +126,9 @@
                     <div class="pd-body">
                         <h5>VSTR Stirrer Gearbox Assembly with Bridge</h5>
                         <a href="#" class="pd-btn"
-                           onclick="openEnquiry('VSTR Stirrer Gearbox Assembly with Bridge'); return false;">
-                            Enquire Now <i class="bi bi-arrow-right"></i>
-                        </a>
+   onclick="openEnquiry('Hydropulper Shell'); return false;">
+    Enquire Now <i class="bi bi-arrow-right"></i>
+</a>
                     </div>
                 </div>
             </div>
@@ -141,10 +142,10 @@
                     </div>
                     <div class="pd-body">
                         <h5>Hydropulper Impeller and Screenplate</h5>
-                        <a href="#" class="pd-btn"
-                           onclick="openEnquiry('Hydropulper Impeller and Screenplate'); return false;">
-                            Enquire Now <i class="bi bi-arrow-right"></i>
-                        </a>
+                       <a href="#" class="pd-btn"
+   onclick="openEnquiry('Hydropulper Shell'); return false;">
+    Enquire Now <i class="bi bi-arrow-right"></i>
+</a>
                     </div>
                 </div>
             </div>
@@ -157,10 +158,10 @@
                     </div>
                     <div class="pd-body">
                         <h5>Screw Conveyor</h5>
-                        <a href="#" class="pd-btn"
-                           onclick="openEnquiry('Screw Conveyor'); return false;">
-                            Enquire Now <i class="bi bi-arrow-right"></i>
-                        </a>
+                       <a href="#" class="pd-btn"
+   onclick="openEnquiry('Hydropulper Shell'); return false;">
+    Enquire Now <i class="bi bi-arrow-right"></i>
+</a>
                     </div>
                 </div>
             </div>
@@ -174,10 +175,10 @@
                     </div>
                     <div class="pd-body">
                         <h5>VSTR Stirrer Agitator Full Equipment</h5>
-                        <a href="#" class="pd-btn"
-                           onclick="openEnquiry('VSTR Stirrer Agitator Full Equipment'); return false;">
-                            Enquire Now <i class="bi bi-arrow-right"></i>
-                        </a>
+                    <a href="#" class="pd-btn"
+   onclick="openEnquiry('Hydropulper Shell'); return false;">
+    Enquire Now <i class="bi bi-arrow-right"></i>
+</a>
                     </div>
                 </div>
             </div>
@@ -190,10 +191,10 @@
                     </div>
                     <div class="pd-body">
                         <h5>1CuM Hydropulper</h5>
-                        <a href="#" class="pd-btn"
-                           onclick="openEnquiry('1CuM Hydropulper'); return false;">
-                            Enquire Now <i class="bi bi-arrow-right"></i>
-                        </a>
+                       <a href="#" class="pd-btn"
+   onclick="openEnquiry('Hydropulper Shell'); return false;">
+    Enquire Now <i class="bi bi-arrow-right"></i>
+</a>
                     </div>
                 </div>
             </div>
@@ -207,9 +208,9 @@
                     <div class="pd-body">
                         <h5>Hydropulper Shell</h5>
                         <a href="#" class="pd-btn"
-                           onclick="openEnquiry('Hydropulper Shell'); return false;">
-                            Enquire Now <i class="bi bi-arrow-right"></i>
-                        </a>
+   onclick="openEnquiry('Hydropulper Shell'); return false;">
+    Enquire Now <i class="bi bi-arrow-right"></i>
+</a>
                     </div>
                 </div>
             </div>
@@ -218,38 +219,52 @@
     </div>
 </section>
 
+
+
+<!-- Popup Modal -->
 <div id="enquiryModal" class="enq-overlay">
   <div class="enq-box">
     <button class="enq-close" onclick="closeEnquiry()">&times;</button>
+    
     <div id="enqFormWrap">
       <h4 id="enqProductTitle">Enquiry</h4>
       <p class="enq-sub">Fill the details, we will contact you soon.</p>
+      
       <form id="enquiryForm" onsubmit="submitEnquiry(event)">
-        <input type="hidden" id="enqProductInput">
+        <input type="hidden" name="access_key" value="f50491de-c660-4a80-bbb8-c2e213d10d1f">
+        <input type="hidden" id="enqProductInput" name="product">
+        <input type="hidden" name="subject" id="enqSubject" value="New Enquiry">
+
         <div class="enq-field">
           <label>Name</label>
-          <input type="text" id="enqName" placeholder="Your name" required>
+          <input type="text" id="enqName" name="name" placeholder="Your name" required>
         </div>
+
         <div class="enq-field">
           <label>Phone No</label>
-          <input type="tel" id="enqPhone" placeholder="10 digit number" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)" required>
+          <input type="tel" id="enqPhone" name="phone" placeholder="10 digit number" maxlength="10" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)" pattern="[0-9]{10}" required>
           <small id="phoneError" style="color:red;display:none;font-size:12px;">Enter valid 10 digit number</small>
         </div>
+
         <div class="enq-field">
           <label>Message</label>
-          <textarea id="enqMsg" rows="4" placeholder="My Message..." required></textarea>
+          <textarea id="enqMsg" name="message" rows="4" placeholder="My Message..." required></textarea>
         </div>
+
         <button type="submit" class="enq-submit">Submit</button>
       </form>
     </div>
+
     <div id="enqSuccessWrap" style="display:none;text-align:center;">
       <div class="enq-success-icon">✓</div>
       <h4>Successfully Submitted!</h4>
       <p>Enquiry for <b id="successProduct"></b> received.</p>
       <button class="enq-submit" onclick="closeEnquiry()">Close</button>
     </div>
+
   </div>
 </div>
+
 
 
 
